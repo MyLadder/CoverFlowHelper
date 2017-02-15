@@ -27,7 +27,7 @@ public class CoverFlowHelper {
     private void init() {
         viewPager.setOffscreenPageLimit(4);
         //左右缩进合适的值
-        int marginPixels = -viewPager.getContext().getResources().getDisplayMetrics().widthPixels / 2;
+        int marginPixels = -viewPager.getContext().getResources().getDisplayMetrics().widthPixels *2/ 3;
         Log.d(TAG, "marginPixels:" + marginPixels);
         viewPager.setPageMargin(marginPixels);
         //中间大，两边大小渐变的动画变化，最大1.4倍
