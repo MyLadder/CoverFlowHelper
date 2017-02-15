@@ -6,12 +6,17 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 /**
  * Created by fanhl on 2017/2/15.
  */
 public class MyFragment extends Fragment {
+    private android.widget.TextView textView;
+    private android.widget.ImageView imageView;
+
     private int position;
 
     public static MyFragment newInstance(int position) {
@@ -31,7 +36,10 @@ public class MyFragment extends Fragment {
     }
 
     private void assignViews(View view) {
-        view.setOnClickListener(new View.OnClickListener() {
+        this.imageView = (ImageView) view.findViewById(R.id.imageView);
+        this.textView = (TextView) view.findViewById(R.id.textView);
+
+        imageView.setOnClickListener(new View.OnClickListener() {
             @Override public void onClick(View view) {
                 Toast.makeText(getActivity(), "Position:" + position, Toast.LENGTH_SHORT).show();
             }
