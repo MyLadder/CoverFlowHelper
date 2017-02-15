@@ -1,7 +1,6 @@
 package com.fanhl.sample;
 
 import android.support.v4.view.ViewPager;
-import android.util.Log;
 import android.view.View;
 
 /**
@@ -27,13 +26,10 @@ public class CoverFlowHelper {
     private void init() {
         viewPager.setOffscreenPageLimit(4);
         //左右缩进合适的值
-        int marginPixels = -viewPager.getContext().getResources().getDisplayMetrics().widthPixels *2/ 3;
-        Log.d(TAG, "marginPixels:" + marginPixels);
-        viewPager.setPageMargin(marginPixels);
+        viewPager.setPageMargin(-viewPager.getContext().getResources().getDisplayMetrics().widthPixels * 3 / 5);
         //中间大，两边大小渐变的动画变化，最大1.4倍
         viewPager.setPageTransformer(true, new ViewPager.PageTransformer() {
             @Override public void transformPage(View page, float position) {
-                Log.d(TAG, "page:" + page + " position:" + position);
                 if (position < -1) {
                     //This page is way off-screen to the left
                 } else if (position <= 1) {
