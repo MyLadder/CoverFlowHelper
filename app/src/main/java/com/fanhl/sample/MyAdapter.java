@@ -13,7 +13,7 @@ public class MyAdapter extends FragmentStatePagerAdapter {
     }
 
     @Override public Fragment getItem(int position) {
-        return MyFragment.newInstance();
+        return MyFragment.newInstance(position);
     }
 
     @Override public int getCount() {
