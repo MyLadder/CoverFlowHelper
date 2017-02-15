@@ -9,6 +9,7 @@ public class MainActivity extends AppCompatActivity {
     private ViewPager viewPager;
 
     private MyAdapter adapter;
+    private CoverFlowHelper coverFlowHelper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,5 +23,7 @@ public class MainActivity extends AppCompatActivity {
 
         adapter = new MyAdapter(getSupportFragmentManager());
         viewPager.setAdapter(adapter);
+
+        coverFlowHelper = CoverFlowHelper.setup(viewPager);
     }
 }
