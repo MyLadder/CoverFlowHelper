@@ -6,7 +6,9 @@ import android.support.v7.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
-    private android.support.v4.view.ViewPager viewPager;
+    private ViewPager viewPager;
+
+    private MyAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,5 +19,8 @@ public class MainActivity extends AppCompatActivity {
 
     private void assignViews() {
         this.viewPager = (ViewPager) findViewById(R.id.viewPager);
+
+        adapter = new MyAdapter(getSupportFragmentManager());
+        viewPager.setAdapter(adapter);
     }
 }
