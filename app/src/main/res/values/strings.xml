@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">CoverFlow</string>
+    <string name="add_cover_flow">加上图库效果</string>
+    <string name="textview">TextView</string>
 </resources>
